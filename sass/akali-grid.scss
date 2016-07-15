@@ -130,10 +130,8 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     flex-direction: row-reverse;
   }
   
-  .column {
-    &:not(.wide) {
-      flex: 1;
-    }
+  &:not(.column) .column:not(.wide) {
+    flex: 1;
   }
   
   .fill.column {
