@@ -1,0 +1,27 @@
+{
+  "name": "akali-grid",
+  "version": "1.0.0",
+  "description": "Semantic, responsive, tiny, easy to learn and mantain flexbox grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meu-guru/akali-grid.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meu-guru/akali-grid/issues"
+  },
+  "homepage": "https://github.com/meu-guru/akali-grid",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
