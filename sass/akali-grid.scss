@@ -110,6 +110,10 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
   }
 }
 
+html, * {
+  box-sizing: border-box;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
