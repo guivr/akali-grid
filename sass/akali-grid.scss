@@ -151,6 +151,54 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
   }
 
   @include generate-grid();
+
+  &[class*="one column"] .column {
+    flex: $twelve-wide-settings;
+  }
+
+  &[class*="two column"] .column {
+    flex: $six-wide-settings;
+  }
+
+  &[class*="three column"] .column {
+    flex: $four-wide-settings;
+  }
+
+  &[class*="four column"] .column {
+    flex: $three-wide-settings;
+  }
+
+  &[class*="five column"] .column {
+    flex: 0 19.99200%;
+  }
+
+  &[class*="six column"] .column {
+    flex: 0 16.66%;
+  }
+
+  &[class*="seven column"] .column {
+    flex: 0 14.28%;
+  }
+
+  &[class*="eight column"] .column {
+    flex: 0 12.49500%;
+  }
+
+  &[class*="nine column"] .column {
+    flex: 0 11.1066667%;
+  }
+
+  &[class*="ten column"] .column {
+    flex: 0 9.99600%;
+  }
+
+  &[class*="eleven column"] .column {
+    flex: 0 9.08727273%;
+  }
+
+  &[class*="twelve column"] .column {
+    flex: 0 8.33%;
+  }
   
   @media all and (max-width: $min-computer-width - .1em){
     &.stackable .column {
