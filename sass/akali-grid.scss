@@ -151,51 +151,51 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
   @include generate-grid();
 
   &[class*="one column"] .column {
-    flex: $twelve-wide-settings;
+    flex: 0 (12/1)*$one-wide;
   }
 
   &[class*="two column"] .column {
-    flex: $six-wide-settings;
+    flex: 0 (12/2)*$one-wide;
   }
 
   &[class*="three column"] .column {
-    flex: $four-wide-settings;
+    flex: 0 (12/3)*$one-wide;
   }
 
   &[class*="four column"] .column {
-    flex: $three-wide-settings;
+    flex: 0 (12/4)*$one-wide;
   }
 
   &[class*="five column"] .column {
-    flex: 0 19.99200%;
+    flex: 0 (12/5)*$one-wide;
   }
 
   &[class*="six column"] .column {
-    flex: 0 16.66%;
+    flex: 0 (12/6)*$one-wide;
   }
 
   &[class*="seven column"] .column {
-    flex: 0 14.28%;
+    flex: 0 (12/7)*$one-wide;
   }
 
   &[class*="eight column"] .column {
-    flex: 0 12.49500%;
+    flex: 0 (12/8)*$one-wide;
   }
 
   &[class*="nine column"] .column {
-    flex: 0 11.1066667%;
+    flex: 0 (12/9)*$one-wide;
   }
 
   &[class*="ten column"] .column {
-    flex: 0 9.99600%;
+    flex: 0 (12/10)*$one-wide;
   }
 
   &[class*="eleven column"] .column {
-    flex: 0 9.08727273%;
+    flex: 0 (12/11)*$one-wide;
   }
 
   &[class*="twelve column"] .column {
-    flex: 0 8.33%;
+    flex: 0 (12/12)*$one-wide;
   }
   
   @media all and (max-width: $min-computer-width - .1em){
@@ -213,8 +213,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 
     [class*="computer only"].column,
     [class*="tablet only"].column,
-    [class*="tablet and computer only"].column,
-    [class*="computer and tablet only"].column {
+    [class*="tablet and computer only"].column {
       display: none;
     }
 
@@ -244,8 +243,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     }
 
     [class*="mobile and tablet only"].column,
-    [class*="tablet and computer only"].column,
-    [class*="computer and tablet only"].column {
+    [class*="tablet and computer only"].column {
       display: block;
     }
   }
@@ -270,8 +268,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     }
 
     [class*="mobile and computer only"].column,
-    [class*="tablet and computer only"].column,
-    [class*="computer and tablet only"].column {
+    [class*="tablet and computer only"].column {
       display: block;
     }
   }
