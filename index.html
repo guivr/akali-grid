@@ -13,7 +13,7 @@
       <p>Powered by <a href="http://meu.guru">meu.guru</a></p>
     </div>
 
-    <div class="all centered big primary color grid">
+    <div class="all centered big primary color row">
       <div class="fluid container">
         <h1 class="big">☯ Akali</h1>
         <h3 class="no margin normal weight padding sides">Semantic, responsive, magical, easy to learn flexbox grid.</h3>
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="centered grid with margin bottom">
+    <div class="centered row with margin bottom">
       <div class="twelve wide column with padding">
         <h1>What is Akali Grid?</h1>
         <p>Grids divide horizontal space into units called "column". Imagine your page divided into 12 columns, you could set your sidenav to take 4 columns and your content to take 8. Using Akali makes content appear to flow more naturally on your page and in other devices.</p>
@@ -40,11 +40,20 @@
       <div class="ten wide on tablet
                   seven wide on computer
                   column">
-          <script src="https://gist.github.com/guivr/c6ba89cb87e8483c1d89a40e2ba3a9d0.js"></script>
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS (More features)</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/c6ba89cb87e8483c1d89a40e2ba3a9d0.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/38819a7ae1e32e2b0f2661776cbb37c0.js"></script>
+          </div>
       </div>
     </div>
 
-    <div class="centered grid with margin bottom">
+    <div class="centered row with margin bottom">
       <div class="twelve wide column with padding">
         <h1>Responsive</h1>
         <p>Akali includes a responsive flexbox grid that appropriately scales up to 12 columns as the device or viewport size increases.</p>
@@ -53,11 +62,20 @@
       <div class="ten wide on tablet
                   seven wide on computer
                   column">
-          <script src="https://gist.github.com/guivr/5256ee0f5209120c6e14b18cb22c960d.js"></script>
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/5256ee0f5209120c6e14b18cb22c960d.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/0e7771963134fd07f1592910708017bd.js"></script>
+          </div>
       </div>
     </div>
 
-    <div class="all centered grid with margin bottom and margin top">
+    <div class="all centered row with margin bottom and margin top">
       <div class="twelve wide on mobile
                   six wide on tablet
                   five wide on computer
@@ -77,11 +95,20 @@
       <div class="six wide on tablet
                   six wide on computer
                   column">
-          <script src="https://gist.github.com/guivr/b761893ecfcfe976f04415d3fa36199c.js"></script>
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS (More features)</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/b761893ecfcfe976f04415d3fa36199c.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/ffabaf3d3311b05175f0be5af3339e5f.js"></script>
+          </div>
       </div>
     </div>
 
-    <div class="centered grid with margin bottom and margin top">
+    <div class="centered row with margin bottom and margin top">
       <div class="twelve wide column with padding">
         <h1>Playground</h1>
         <p>How about try yourself Akali Grid right now?</p>
@@ -92,7 +119,7 @@
       </div>
     </div>
 
-    <div class="centered grid with margin bottom and margin top">
+    <div class="centered row with margin bottom and margin top">
       <div class="twelve wide column with padding">
         <h1>Support Akali on GitHub</h1>
         <p>Please, contribute! Don't be afraid, we really need your help to grow.</p>
@@ -106,5 +133,21 @@
     </div>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script>
+      $('.tab .button').on('click', function(){
+        $(this).parent().find('.button').removeClass('active');
+        $(this).parent().parent().find('.tab-content').removeClass('active');
+        
+        var tabId = $(this).data('tab');
+
+        $(this).parent().parent().find('.tab-content.tab-'+tabId).addClass('active');
+        $(this).each(function(){
+          if($(this).data('tab') == tabId){
+            $(this).addClass('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

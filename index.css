@@ -48,6 +48,11 @@ iframe[src*="codepen"],
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
+.gist {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
 .gist-file {
   margin-bottom: 0 !important;
 }
@@ -93,13 +98,13 @@ a.white {
   font-weight: normal;
 }
 
-.big.grid {
+.big.row {
   padding-top: 15vh;
   padding-bottom: 15vh;
   margin-bottom: 60px;
 }
 
-[class*="with margin bottom"].grid {
+[class*="with margin bottom"].row {
   margin-bottom: 80px;
 }
 
@@ -144,12 +149,7 @@ a.white {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  text-transform: lowercase;
 }
-
-  .button:first-letter {
-    text-transform: uppercase;
-  }
 
   .button:hover {
     background: #d3d4d6;
@@ -163,3 +163,44 @@ a.white {
   .lighter.button:hover {
     background: rgba(255, 255, 255, .4);
   }
+
+.buttons .button {
+  float: left;
+  border-radius: 0;
+}
+
+.buttons .button:first-child {
+  border-top-left-radius: 4px;
+}
+
+.buttons .button:last-child {
+  border-top-right-radius: 4px;
+}
+
+.buttons:not(.tab):after {
+  content: '';
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.tab.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab.buttons .button {
+  float: none;
+  flex: 1;
+}
+
+.tab .button.active {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.tab-content:not(.active) {
+  display: none;
+}
