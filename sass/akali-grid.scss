@@ -5,34 +5,17 @@
 */
 
 $grid-total-columns: 12;
-$min-tablet-width: 48em;
+$min-tablet-width:   48em;
 $min-computer-width: 75em;
+$one-wide:           100% / 12;
 
-$one-wide:    8.33%;
-$two-wide:    (2*$one-wide);
-$three-wide:  (3*$one-wide);
-$four-wide:   (4*$one-wide);
-$five-wide:   (5*$one-wide);
-$six-wide:    (6*$one-wide);
-$seven-wide:  (7*$one-wide);
-$eight-wide:  (8*$one-wide);
-$nine-wide:   (9*$one-wide);
-$ten-wide:    (10*$one-wide);
-$eleven-wide: (11*$one-wide);
-$twelve-wide: (12*$one-wide);
+@function wideWidth($number) {
+  @return ($number * $one-wide);
+}
 
-$one-wide-settings:    0 $one-wide;
-$two-wide-settings:    0 $two-wide;
-$three-wide-settings:  0 $three-wide;
-$four-wide-settings:   0 $four-wide;
-$five-wide-settings:   0 $five-wide;
-$six-wide-settings:    0 $six-wide;
-$seven-wide-settings:  0 $seven-wide;
-$eight-wide-settings:  0 $eight-wide;
-$nine-wide-settings:   0 $nine-wide;
-$ten-wide-settings:    0 $ten-wide;
-$eleven-wide-settings: 0 $eleven-wide;
-$twelve-wide-settings: 0 $twelve-wide;
+@function wideSettings($number) {
+  @return 0 wideWidth($number);
+}
 
 $wides: twelve eleven ten nine eight seven six five four three two one;
 
@@ -178,33 +161,33 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 }
 
 @mixin get-wide-settings($wide) {
-       @if $wide == twelve { flex: $twelve-wide-settings; }
-  @else if $wide == eleven { flex: $eleven-wide-settings; }
-  @else if $wide == ten    { flex: $ten-wide-settings;    }
-  @else if $wide == nine   { flex: $nine-wide-settings;   }
-  @else if $wide == eight  { flex: $eight-wide-settings;  }
-  @else if $wide == seven  { flex: $seven-wide-settings;  }
-  @else if $wide == six    { flex: $six-wide-settings;    }
-  @else if $wide == five   { flex: $five-wide-settings;   }
-  @else if $wide == four   { flex: $four-wide-settings;   }
-  @else if $wide == three  { flex: $three-wide-settings;  }
-  @else if $wide == two    { flex: $two-wide-settings;    }
-  @else if $wide == one    { flex: $one-wide-settings;    }
+       @if $wide == twelve { flex: wideSettings(12); }
+  @else if $wide == eleven { flex: wideSettings(11); }
+  @else if $wide == ten    { flex: wideSettings(10); }
+  @else if $wide == nine   { flex: wideSettings(9); }
+  @else if $wide == eight  { flex: wideSettings(8); }
+  @else if $wide == seven  { flex: wideSettings(7); }
+  @else if $wide == six    { flex: wideSettings(6); }
+  @else if $wide == five   { flex: wideSettings(5); }
+  @else if $wide == four   { flex: wideSettings(4); }
+  @else if $wide == three  { flex: wideSettings(3); }
+  @else if $wide == two    { flex: wideSettings(3); }
+  @else if $wide == one    { flex: wideSettings(1); }
 }
 
 @mixin get-offset-value($wide) {
-       @if $wide == twelve { margin-left: $twelve-wide; }
-  @else if $wide == eleven { margin-left: $eleven-wide; }
-  @else if $wide == ten    { margin-left: $ten-wide;    }
-  @else if $wide == nine   { margin-left: $nine-wide;   }
-  @else if $wide == eight  { margin-left: $eight-wide;  }
-  @else if $wide == seven  { margin-left: $seven-wide;  }
-  @else if $wide == six    { margin-left: $six-wide;    }
-  @else if $wide == five   { margin-left: $five-wide;   }
-  @else if $wide == four   { margin-left: $four-wide;   }
-  @else if $wide == three  { margin-left: $three-wide;  }
-  @else if $wide == two    { margin-left: $two-wide;    }
-  @else if $wide == one    { margin-left: $one-wide;    }
+       @if $wide == twelve { margin-left: wideWidth(12); }
+  @else if $wide == eleven { margin-left: wideWidth(11); }
+  @else if $wide == ten    { margin-left: wideWidth(10); }
+  @else if $wide == nine   { margin-left: wideWidth(9); }
+  @else if $wide == eight  { margin-left: wideWidth(8); }
+  @else if $wide == seven  { margin-left: wideWidth(7); }
+  @else if $wide == six    { margin-left: wideWidth(6); }
+  @else if $wide == five   { margin-left: wideWidth(5); }
+  @else if $wide == four   { margin-left: wideWidth(4); }
+  @else if $wide == three  { margin-left: wideWidth(3); }
+  @else if $wide == two    { margin-left: wideWidth(3); }
+  @else if $wide == one    { margin-left: wideWidth(1); }
 }
 
 @mixin generate-grid {
