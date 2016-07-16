@@ -13,6 +13,7 @@
 * [About](#about)
 * [Getting started](#start)
 * [Features](#features)
+* [Documentation](#docs)
 * [Contact](#contributors)
 * [License](#license)
 
@@ -34,7 +35,7 @@ Grids divide horizontal space into units called "column". Imagine your page divi
 	<link rel='stylesheet' type='text/css' href='akali-grid.css'>
 ```
 
-* Read (https://meu-guru.github.io/akali-grid/docs.html)[the documentation]
+* Read [https://meu-guru.github.io/akali-grid/docs.html](the documentation).
 
 ## <a name="features"></a>Features
 ### Semantic
@@ -59,6 +60,10 @@ You'll love Akali, because it comes with unbelievable handy utilities.
 5. Set offset for each device 'offset two on tablet' or set global offset 'offset two column'
 6. Reverse a grid order with 'reversed grid', if grid is stackable, 'stackable reversed grid'
 7. Create containers or full width containers with 'container' or 'fluid container'  
+
+
+## <a name="docs"></a>Documentation
+> Read the full documentation [here](https://meu-guru.github.io/akali-grid/docs.html)
 
 
 ## <a name="contributors"></a>Contributors
