@@ -37,8 +37,6 @@ iframe {
 @media screen and (max-width: 47.9em) {
   .gist {
     max-height: 380px;
-    margin-left: 30px;
-    margin-right: 30px;
   }
 }
 
