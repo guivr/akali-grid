@@ -13,13 +13,13 @@
 * [About](#about)
 * [Getting started](#start)
 * [Features](#features)
-* [F.A.Q](#faq)
-* [Contact](#contact)
+* [Contact](#contributors)
 * [License](#license)
 
 ## <a name="about"></a>About
 ### What is Akali Grid?
 Grids divide horizontal space into units called "column". Imagine your page divided into 12 columns, you could set your sidenav to take 4 columns and your content to take 8. Using Akali makes content appear to flow more naturally on your page and in other devices.
+
 
 ## <a name="start"></a>Getting started
 
@@ -34,18 +34,20 @@ Grids divide horizontal space into units called "column". Imagine your page divi
 	<link rel='stylesheet' type='text/css' href='akali-grid.css'>
 ```
 
-* Have fun!
+* Read (https://meu-guru.github.io/akali-grid/docs.html)[the documentation]
 
 ## <a name="features"></a>Features
 ### Semantic
-Akali is semantic, which improves your codes readability, maintanability and consequently your team's productivity.
+Akali is semantic, which improves your code's readability, maintanability and consequently your team's productivity.
 
-Classes like "four wide column" seems to be sentences and are easier for everyone to understand what's happening on the front page, even if you're not a front-end developer.
+Choose between HTML or SCSS/SASS and you'll always see how Akali maintains its semantics like no other grid system. Classes like "four wide column" seem to be sentences and are easier for everyone to understand what's happening on the page, even if you're not a front-end developer.
+
 
 ### Responsive
 Akali includes a responsive flexbox grid that appropriately scales up to 12 columns as the device or viewport size increases.
 
 You can set columns wides on each device if necessary.
+
 
 ### Magical
 You'll love Akali, because it comes with unbelievable handy utilities.
@@ -58,12 +60,11 @@ You'll love Akali, because it comes with unbelievable handy utilities.
 6. Reverse a grid order with 'reversed grid', if grid is stackable, 'stackable reversed grid'
 7. Create containers or full width containers with 'container' or 'fluid container'  
 
-## <a name="faq"></a>F.A.Q
-* Hello! How are you?
-Fine, thanks.
 
-## <a name="contact"></a>Contact
-* **Guilherme Vieira Rizzo** - Webdesigner <guivr2011@gmail.com>
+## <a name="contributors"></a>Contributors
+* Guilherme Rizzo - Creator of Akali Grid
+* 
+
 
 ## <a name="license"></a>License
 > You can check out the full license [here](https://github.com/meu-guru/akali-grid/blob/master/LICENSE)
