@@ -35,7 +35,6 @@ Grids divide horizontal space into units called "column". Imagine your page divi
 	<link rel='stylesheet' type='text/css' href='akali-grid.css'>
 ```
 
-* Read [https://meu-guru.github.io/akali-grid/docs.html](the documentation).
 
 ## <a name="features"></a>Features
 ### Semantic
