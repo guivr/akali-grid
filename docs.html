@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>☯ Akali by meu.guru</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat">
+    <link href='dist/akali-grid.css' rel='stylesheet' type='text/css'>
+    <link href='index.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="powered">
+      <p>Powered by <a href="http://meu.guru">meu.guru</a></p>
+    </div>
+
+    <div class="all centered big primary color row">
+      <div class="fluid container">
+        <h1 class="big">☯ Docs</h1>
+        <h3 class="no margin normal weight padding sides">Are you ready to unlock Akali's power?</h3>
+      </div>
+    </div>
+
+    <div class="centered row with margin bottom">
+      <div class="twelve wide column with padding">
+        <h1>Grid System</h1>
+        <p>Akali it's based on a 12 column responsive and flexbox layout, you can use it with SASS/SCSS mixins or our predefined classes.</p>
+      </div>
+
+      <div class="twelve wide column with padding">
+        <h1>Basics:</h1>
+        <ul>
+          <li>The three major components of Akali are: Row, Column and Container</li>
+          <li>Rows have 100% width and is divided into 12 possible columns spaces.</li>
+          <li>Columns are Row's children and can be 1 to 12 wide (8,33% to 100%)</li>
+          <li>Containers are large width elements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="centered row with margin bottom">
+      <div class="twelve wide column with padding">
+        <h1>Rows</h1>
+        <p>There are two types of Rows in Akali:</p>
+        <ul>
+          <li>Normal (Default, Centered, All Centered, Stackable, Reversed)</li>
+          <li>Limited Row</li>
+        </ul>
+        <p>Normal rows works the way you expect, while Limited Rows override's columns wide to be exactly the defined on row, for example, a two row column will have its column's size defined to 50%, which means 2 per row.</p>
+        <p class="margin top">If you are using SASS/SCSS, Rows have the possible arguments by default:</p>
+        <ul>
+          <li>$mobile: auto, $tablet: auto, $computer: auto - Create limited rows that changes with the devices size</li>
+          <li>$centered: false, $vertical-centered: false</li>
+          <li>$reversed: false - Columns order will be reversed</li>
+          <li>$stackable: false, $reversed-stackable: false - Columns in a stackable row takes 100% width on mobile</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide rows in specific devices by declaring any of these vars to false</li>
+        </ul>
+      </div>
+      <div class="seven wide on computer
+                  ten wide column">
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS (More features)</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/9156f01a476dfcf2eb8d236e8edd6e58.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/21ca2d69bcc4f68da444e20d0ff20a24.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="centered row with margin bottom">
+      <div class="twelve wide column with padding">
+        <h1>Columns</h1>
+        <p>There are three types of Rows in Akali:</p>
+        <ul>
+          <li>Auto size (If there's 1 column, width: 100%; if there's 2 column, width: 50%)</li>
+          <li>Wide defined (Can be different as the device changes)</li>
+          <li>Fill (Complete columns spaces on a row, e.g.: 4 columns taken, fill will take another 8)</li>
+        </ul>
+        <p>If you don't define a columns' wide on a Normal Row, it will automatically fit conforms the number of columns, for example, 4 auto size in a normal row, each one will have 25% width.</p>
+        <p class="margin top">If you are using SASS/SCSS, Columns have the possible arguments by default:</p>
+        <ul>
+          <li>$mobile: auto, $tablet: auto, $computer: auto - Define the wide of the column in devices, remember that Akali is mobile-first, so if you do this: @include column(4) it will understand that you want to create a column that is 4 wide on all devices.</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide columns in specific devices by declaring any of these vars to false</li>
+          <li>$offset: 0 ($mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0) - Offset are left margins that take the argument of a column wide, and you can set different offsets according to devices.</li>
+        </ul>
+      </div>
+      <div class="seven wide on computer
+                  ten wide column">
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS (More features)</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/cd1ef9e87e51c9036099f0d5e653f9c1.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/42477b02b2a48c0ee38112d01291991a.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="centered row with margin bottom">
+      <div class="twelve wide column with padding">
+        <h1>Containers</h1>
+        <p>Containers are great to highlight important elements in page. There are two types of Containers in Akali:</p>
+        <ul>
+          <li>Normal (90% width horizontally centered)</li>
+          <li>Fluid (100% width)</li>
+        </ul>
+        <p class="margin top">If you are using SASS/SCSS, Containers have the possible arguments by default:</p>
+        <ul>
+          <li>$fluid: false</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide containers in specific devices by declaring any of these vars to false</li>
+        </ul>
+      </div>
+      <div class="seven wide on computer
+                  ten wide column">
+          <div class="tab buttons">
+            <div class="active button" data-tab="1">HTML</div>
+            <div class="button" data-tab="2">SCSS (More features)</div>
+          </div>
+          <div class="tab-content active tab-1">
+            <script src="https://gist.github.com/guivr/86eb83e6a98aa3cfd95b4464be75ed0e.js"></script>
+          </div>
+          <div class="tab-content tab-2">
+            <script src="https://gist.github.com/guivr/9e9332ab051ff5a9dd80bdc563b3de6d.js"></script>
+          </div>
+      </div>
+    </div>
+
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script>
+      $('.tab .button').on('click', function(){
+        $(this).parent().find('.button').removeClass('active');
+        $(this).parent().parent().find('.tab-content').removeClass('active');
+        
+        var tabId = $(this).data('tab');
+
+        $(this).parent().parent().find('.tab-content.tab-'+tabId).addClass('active');
+        $(this).each(function(){
+          if($(this).data('tab') == tabId){
+            $(this).addClass('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

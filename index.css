@@ -8,6 +8,10 @@ body {
   color: #383838;
 }
 
+a {
+  color: #383838;
+}
+
 h1.big {
   font-size: 70px;
   margin: 0px;
@@ -20,7 +24,8 @@ li {
   max-width: 30rem;
 }
 
-ol {
+ol,
+ul {
   margin-top: 35px;
   text-align: left;
 }
@@ -77,6 +82,10 @@ a[class*="no decoration"] {
 
 a.white {
   color: #fff;
+}
+
+p.margin.top {
+  margin-top: 60px;
 }
 
 .margin.top {
