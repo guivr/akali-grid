@@ -4,6 +4,7 @@
         reverse order on mobile...
 */
 
+$grid-total-columns: 12;
 $min-tablet-width: 48em;
 $min-computer-width: 75em;
 
@@ -34,6 +35,143 @@ $eleven-wide-settings: 0 $eleven-wide;
 $twelve-wide-settings: 0 $twelve-wide;
 
 $wides: twelve eleven ten nine eight seven six five four three two one;
+
+@mixin calculate-offset($wide) {
+  margin-left: $wide * $one-wide;
+}
+
+@mixin row($mobile: auto, $tablet: auto, $computer: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
+  display: flex;
+  flex-wrap: wrap;
+
+  @if $centered == true {
+    justify-content: center;
+  }
+
+  @if $vertical-centered == true {
+    align-items: center;
+  }
+
+  @if $reversed == true {
+    flex-direction: row-reverse;
+  }
+
+  @if $mobile != auto {
+    @if $stackable == false {
+      & > * {
+        flex: 0 ($grid-total-columns/$mobile)*$one-wide !important;
+      }
+    } @else {
+      & > * {
+        flex: 0 100%;
+      }
+
+      @if $reversed-stackable == true {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @if $mobile-visible == false { display: none; }
+
+  @if $tablet != auto {
+    @media all and (min-width: $min-tablet-width) {
+      & > * {
+        flex: 0 ($grid-total-columns/$tablet)*$one-wide !important;
+      }
+
+      @if $tablet-visible == false { display: none; }
+    }
+  }
+
+  @if $computer != auto {
+    @media all and (min-width: $min-computer-width) {
+      & > * {
+        flex: 0 ($grid-total-columns/$computer)*$one-wide !important;
+      }
+
+      @if $computer-visible == false { display: none; }
+    }
+  }
+}
+
+@mixin column ($mobile: auto, $tablet: auto, $computer: auto, $mobile-visible: true, $tablet-visible: true, $computer-visible: true, $offset: 0, $mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0){
+  @if $mobile == auto {
+    flex: 1;
+  } @else if $mobile == fill{
+    flex: 1;
+  } @else {
+    flex: 0 $mobile * $one-wide;
+  }
+
+  @if $offset != 0 {
+    @include calculate-offset($offset);
+  }
+
+  @if $mobile-visible == false { display: none; }
+
+  @if $tablet != auto {
+    @media all and (min-width: $min-tablet-width) {
+      @if $tablet == fill {
+        flex: 1;
+      } @else {
+        flex: 0 $tablet * $one-wide;
+      }
+
+      @if $offset-tablet == 0 {
+        margin-left: 0;
+      } @else {
+        @include calculate-offset($offset);
+      }
+
+      @if $tablet-visible == false { display: none; }
+    }
+  }
+
+  @if $computer != auto {
+    @media all and (min-width: $min-computer-width) {
+      @if $computer == fill {
+        flex: 1;
+      } @else {
+        flex: 0 $computer * $one-wide;
+      }
+
+      @if $offset-computer == 0 {
+        margin-left: 0;
+      } @else {
+        @include calculate-offset($offset);
+      }
+
+      @if $computer-visible == false { display: none; }
+    }
+  }
+}
+
+@mixin container ($fluid: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
+  max-width: 100%;
+      width: 90%;
+  margin: 0 auto;
+
+  @if fluid == true {
+    width: 100%;
+  }
+
+  @if $mobile-visible == false {
+    display: none;
+  }
+
+  @if $tablet-visible == false {
+    @media all and (min-width: $min-tablet-width) {
+      display: none;
+    }
+  }
+
+  @if $computer-visible == false {
+    @media all and (min-width: $min-computer-width) {
+      display: none;
+    }
+  }
+}
 
 @mixin get-wide-settings($wide) {
        @if $wide == twelve { flex: $twelve-wide-settings; }
@@ -76,7 +214,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     }
   }
 
-  @media all and (max-width: $min-computer-width - .1em){
+  @media all and (min-width: 1px){
     @each $wide in $wides {
       [class*="#{$wide} wide on mobile"].column {
         @include get-wide-settings($wide);
@@ -87,7 +225,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     }
   }
 
-  @media all and (min-width: $min-tablet-width) and (max-width: $min-computer-width - .1em) {
+  @media all and (min-width: $min-tablet-width) {
     @each $wide in $wides {
       [class*="#{$wide} wide on tablet"].column {
         @include get-wide-settings($wide);
@@ -110,11 +248,12 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
   }
 }
 
+
 html, * {
   box-sizing: border-box;
 }
 
-.grid {
+.row {
   display: flex;
   flex-wrap: wrap;
 
@@ -232,10 +371,6 @@ html, * {
       flex: 1 !important;
     }
 
-    [class*="offset zero column"] {
-      margin-left: 0;
-    }
-
     [class*="mobile only"].column,
     [class*="computer only"].column,
     [class*="mobile and computer only"].column {
@@ -251,14 +386,16 @@ html, * {
       display: block;
     }
   }
+
+  @media all and (min-width: $min-tablet-width) {
+    [class*="offset zero on tablet"].column {
+      margin-left: 0;
+    }
+  }
   
   @media all and (min-width: $min-computer-width) {
     [class*="fill on computer"].column {
       flex: 1 !important;
-    }
-
-    [class*="offset zero column"] {
-      margin-left: 0;
     }
 
     [class*="mobile only"].column,
@@ -274,6 +411,10 @@ html, * {
     [class*="mobile and computer only"].column,
     [class*="tablet and computer only"].column {
       display: block;
+    }
+
+    [class*="offset zero on computer"].column {
+      margin-left: 0;
     }
   }
   
