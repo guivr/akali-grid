@@ -43,6 +43,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 @mixin row($mobile: auto, $tablet: auto, $computer: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 
   @if $centered == true {
     justify-content: center;
@@ -96,6 +97,8 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 }
 
 @mixin column ($mobile: auto, $tablet: auto, $computer: auto, $mobile-visible: true, $tablet-visible: true, $computer-visible: true, $offset: 0, $mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0){
+  box-sizing: border-box;
+
   @if $mobile == auto {
     flex: 1;
   } @else if $mobile == fill{
@@ -151,6 +154,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
   max-width: 100%;
       width: 90%;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @if fluid == true {
     width: 100%;
@@ -249,13 +253,14 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 }
 
 
-html, * {
-  box-sizing: border-box;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .column {
+    box-sizing: border-box;
+  }
 
   &.centered {
     text-align: center;
@@ -285,6 +290,7 @@ html, * {
     max-width: 100%;
         width: 90%;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   
   .fluid.container {
