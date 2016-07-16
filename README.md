@@ -6,7 +6,7 @@
 	<img src="https://img.shields.io/badge/license-MIT-blue.svg">
     <a href="https://github.com/meu-guru/akali-grid/stargazers"><img src="https://img.shields.io/github/stars/meu-guru/akali-grid.svg"></a>
     <a href="https://github.com/meu-guru/akali-grid/issues"><img src="https://img.shields.io/github/issues/meu-guru/akali-grid.svg"></a>
-    <img src="https://img.shields.io/badge/version-0.4-green.svg">
+    <img src="https://img.shields.io/badge/version-0.1-green.svg">
     <a href="http://codepen.io/guivr/pen/YWEbGG"><img src="https://img.shields.io/badge/demo-online-green.svg"></a>
 </p>
 
@@ -66,8 +66,8 @@ You'll love Akali, because it comes with unbelievable handy utilities.
 
 
 ## <a name="contributors"></a>Contributors
-* Guilherme Rizzo - Creator of Akali Grid
-* 
+* guivr - Creator of Akali Grid
+* @jeffersondanielss
 
 
 ## <a name="license"></a>License
