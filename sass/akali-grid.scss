@@ -256,6 +256,11 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
 .row {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .column {
+    box-sizing: border-box;
+  }
 
   &.centered {
     text-align: center;
@@ -285,6 +290,7 @@ $wides: twelve eleven ten nine eight seven six five four three two one;
     max-width: 100%;
         width: 90%;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   
   .fluid.container {
