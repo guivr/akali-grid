@@ -1,3 +1,4 @@
+@import 'settings.scss';
 
 @mixin calculate-offset($wide) {
   margin-left: $wide * $one-wide;
