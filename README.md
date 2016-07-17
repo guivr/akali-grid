@@ -67,7 +67,7 @@ You'll love Akali, because it comes with unbelievable handy utilities.
 
 ## <a name="contributors"></a>Contributors
 * guivr - Creator of Akali Grid
-* @jeffersondanielss
+* jeffersondanielss
 
 
 ## <a name="license"></a>License
