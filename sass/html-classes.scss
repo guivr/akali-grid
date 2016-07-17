@@ -1,0 +1,297 @@
+@import 'settings.scss';
+
+@mixin generate-grid {
+
+  @each $wide in $wides {
+    [class*="#{$wide} wide column"] {
+      @include get-wide-settings($wide);
+    }
+    [class$="offset #{$wide} column"] {
+      @include get-offset-value($wide);
+    }
+  }
+
+  @media all and (min-width: 1px){
+    @each $wide in $wides {
+      [class*="#{$wide} wide on mobile"].column {
+        @include get-wide-settings($wide);
+      }
+      [class*="offset #{$wide} on mobile"].column {
+        @include get-offset-value($wide);
+      }
+    }
+  }
+
+  @media all and (min-width: $min-tablet-width) {
+    @each $wide in $wides {
+      [class*="#{$wide} wide on tablet"].column {
+        @include get-wide-settings($wide);
+      }
+      [class*="offset #{$wide} on tablet"].column {
+        @include get-offset-value($wide);
+      }
+    }
+  }
+
+  @media all and (min-width: $min-computer-width) {
+    @each $wide in $wides {
+      [class*="#{$wide} wide on computer"].column {
+        @include get-wide-settings($wide);
+      }
+      [class*="offset #{$wide} on computer"].column {
+        @include get-offset-value($wide);
+      }
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .column {
+    box-sizing: border-box;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+  
+  &.centered:not([class*="only text"]) {
+    justify-content: center;
+  }
+
+  &.all.centered {
+    align-items: center;
+  }
+  
+  &.reversed {
+    flex-direction: row-reverse;
+  }
+  
+  &:not(.column) .column:not(.wide) {
+    flex: 1;
+  }
+  
+  .fill.column {
+    flex: 1;
+  }
+  
+  .container {
+    max-width: 100%;
+        width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .fluid.container {
+    width: 100%;
+  }
+
+  @include generate-grid();
+
+  &[class*="one column"] .column {
+    flex: 0 (12/1)*$one-wide;
+  }
+
+  &[class*="two column"] .column {
+    flex: 0 (12/2)*$one-wide;
+  }
+
+  &[class*="three column"] .column {
+    flex: 0 (12/3)*$one-wide;
+  }
+
+  &[class*="four column"] .column {
+    flex: 0 (12/4)*$one-wide;
+  }
+
+  &[class*="five column"] .column {
+    flex: 0 (12/5)*$one-wide;
+  }
+
+  &[class*="six column"] .column {
+    flex: 0 (12/6)*$one-wide;
+  }
+
+  &[class*="seven column"] .column {
+    flex: 0 (12/7)*$one-wide;
+  }
+
+  &[class*="eight column"] .column {
+    flex: 0 (12/8)*$one-wide;
+  }
+
+  &[class*="nine column"] .column {
+    flex: 0 (12/9)*$one-wide;
+  }
+
+  &[class*="ten column"] .column {
+    flex: 0 (12/10)*$one-wide;
+  }
+
+  &[class*="eleven column"] .column {
+    flex: 0 (12/11)*$one-wide;
+  }
+
+  &[class*="twelve column"] .column {
+    flex: 0 (12/12)*$one-wide;
+  }
+  
+  @media all and (max-width: $min-computer-width - .1em){
+    &.stackable .column {
+      flex: 0 100%;
+    }
+  
+    &.reversed.stackable {
+      flex-direction: column-reverse;
+    }
+
+    [class*="fill on mobile"].column {
+      flex: 1 !important;
+    }
+
+    [class*="computer only"].column,
+    [class*="tablet only"].column,
+    [class*="tablet and computer only"].column {
+      display: none;
+    }
+
+    [class*="mobile and tablet only"].column,
+    [class*="mobile and computer only"].column {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $min-tablet-width) and (max-width: $min-computer-width - .1em) {
+    [class*="fill on tablet"].column {
+      flex: 1 !important;
+    }
+
+    [class*="mobile only"].column,
+    [class*="computer only"].column,
+    [class*="mobile and computer only"].column {
+      display: none;
+    }
+
+    [class*="tablet only"].column {
+      display: block;
+    }
+
+    [class*="mobile and tablet only"].column,
+    [class*="tablet and computer only"].column {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $min-tablet-width) {
+    [class*="offset zero on tablet"].column {
+      margin-left: 0;
+    }
+  }
+  
+  @media all and (min-width: $min-computer-width) {
+    [class*="fill on computer"].column {
+      flex: 1 !important;
+    }
+
+    [class*="mobile only"].column,
+    [class*="tablet only"].column,
+    [class*="mobile and tablet only"].column  {
+      display: none;
+    }
+
+    [class*="computer only"].column {
+      display: block;
+    }
+
+    [class*="mobile and computer only"].column,
+    [class*="tablet and computer only"].column {
+      display: block;
+    }
+
+    [class*="offset zero on computer"].column {
+      margin-left: 0;
+    }
+  }
+  
+  @media all and (max-width: $min-computer-width - .1em){
+    &.stackable .column {
+      flex: 0 100%;
+    }
+  
+    &.reversed.stackable {
+      flex-direction: column-reverse;
+    }
+
+    [class*="fill on mobile"].column {
+      flex: 1 !important;
+    }
+
+    [class*="computer only"].column,
+    [class*="tablet only"].column,
+    [class*="tablet and computer only"].column {
+      display: none;
+    }
+
+    [class*="mobile and tablet only"].column,
+    [class*="mobile and computer only"].column {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $min-tablet-width) and (max-width: $min-computer-width - .1em) {
+    [class*="fill on tablet"].column {
+      flex: 1 !important;
+    }
+
+    [class*="mobile only"].column,
+    [class*="computer only"].column,
+    [class*="mobile and computer only"].column {
+      display: none;
+    }
+
+    [class*="tablet only"].column {
+      display: block;
+    }
+
+    [class*="mobile and tablet only"].column,
+    [class*="tablet and computer only"].column {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $min-tablet-width) {
+    [class*="offset zero on tablet"].column {
+      margin-left: 0;
+    }
+  }
+  
+  @media all and (min-width: $min-computer-width) {
+    [class*="fill on computer"].column {
+      flex: 1 !important;
+    }
+
+    [class*="mobile only"].column,
+    [class*="tablet only"].column,
+    [class*="mobile and tablet only"].column  {
+      display: none;
+    }
+
+    [class*="computer only"].column {
+      display: block;
+    }
+
+    [class*="mobile and computer only"].column,
+    [class*="tablet and computer only"].column {
+      display: block;
+    }
+
+    [class*="offset zero on computer"].column {
+      margin-left: 0;
+    }
+  }
+  
+}

@@ -1,0 +1,43 @@
+$grid-total-columns: 12;
+$min-tablet-width:   48em;
+$min-computer-width: 75em;
+$one-wide:           100% / 12;
+$wides: twelve eleven ten nine eight seven six five four three two one;
+
+@function wideWidth($number) {
+  @return ($number * $one-wide);
+}
+
+@function wideSettings($number) {
+  @return 0 wideWidth($number);
+}
+
+@mixin get-wide-settings($wide) {
+       @if $wide == twelve { flex: wideSettings(12); }
+  @else if $wide == eleven { flex: wideSettings(11); }
+  @else if $wide == ten    { flex: wideSettings(10); }
+  @else if $wide == nine   { flex: wideSettings(9); }
+  @else if $wide == eight  { flex: wideSettings(8); }
+  @else if $wide == seven  { flex: wideSettings(7); }
+  @else if $wide == six    { flex: wideSettings(6); }
+  @else if $wide == five   { flex: wideSettings(5); }
+  @else if $wide == four   { flex: wideSettings(4); }
+  @else if $wide == three  { flex: wideSettings(3); }
+  @else if $wide == two    { flex: wideSettings(3); }
+  @else if $wide == one    { flex: wideSettings(1); }
+}
+
+@mixin get-offset-value($wide) {
+       @if $wide == twelve { margin-left: wideWidth(12); }
+  @else if $wide == eleven { margin-left: wideWidth(11); }
+  @else if $wide == ten    { margin-left: wideWidth(10); }
+  @else if $wide == nine   { margin-left: wideWidth(9); }
+  @else if $wide == eight  { margin-left: wideWidth(8); }
+  @else if $wide == seven  { margin-left: wideWidth(7); }
+  @else if $wide == six    { margin-left: wideWidth(6); }
+  @else if $wide == five   { margin-left: wideWidth(5); }
+  @else if $wide == four   { margin-left: wideWidth(4); }
+  @else if $wide == three  { margin-left: wideWidth(3); }
+  @else if $wide == two    { margin-left: wideWidth(3); }
+  @else if $wide == one    { margin-left: wideWidth(1); }
+}
