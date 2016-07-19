@@ -92,52 +92,17 @@
 
   @include generate-grid();
 
-  &[class*="one column"] .column {
-    flex: 0 (12/1)*$one-wide;
+  @function flexWidth( $number ) {
+    @return 0 ( 12/ $number ) * $one-wide;
   }
 
-  &[class*="two column"] .column {
-    flex: 0 (12/2)*$one-wide;
-  }
+  $count: length($wides);
 
-  &[class*="three column"] .column {
-    flex: 0 (12/3)*$one-wide;
-  }
-
-  &[class*="four column"] .column {
-    flex: 0 (12/4)*$one-wide;
-  }
-
-  &[class*="five column"] .column {
-    flex: 0 (12/5)*$one-wide;
-  }
-
-  &[class*="six column"] .column {
-    flex: 0 (12/6)*$one-wide;
-  }
-
-  &[class*="seven column"] .column {
-    flex: 0 (12/7)*$one-wide;
-  }
-
-  &[class*="eight column"] .column {
-    flex: 0 (12/8)*$one-wide;
-  }
-
-  &[class*="nine column"] .column {
-    flex: 0 (12/9)*$one-wide;
-  }
-
-  &[class*="ten column"] .column {
-    flex: 0 (12/10)*$one-wide;
-  }
-
-  &[class*="eleven column"] .column {
-    flex: 0 (12/11)*$one-wide;
-  }
-
-  &[class*="twelve column"] .column {
-    flex: 0 (12/12)*$one-wide;
+  @each $wide in $wides {
+    &[class*="#{$wide} column"] .column {
+      flex: flexWidth($count);
+    }
+    $count: $count - 1;
   }
   
   @media all and (max-width: $min-computer-width - .1em){
