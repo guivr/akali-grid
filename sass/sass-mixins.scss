@@ -7,6 +7,7 @@
 @mixin row($mobile: auto, $tablet: auto, $computer: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   box-sizing: border-box;
 
   @if $centered == true {
@@ -62,6 +63,7 @@
 
 @mixin column ($mobile: auto, $tablet: auto, $computer: auto, $mobile-visible: true, $tablet-visible: true, $computer-visible: true, $offset: 0, $mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0){
   box-sizing: border-box;
+  max-width: 100%;
 
   @if $mobile == auto {
     flex: 1;
