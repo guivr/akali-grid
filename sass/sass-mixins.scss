@@ -6,6 +6,7 @@
 
 @mixin row($mobile: auto, $tablet: auto, $computer: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   flex-direction: row;
   box-sizing: border-box;
@@ -87,7 +88,7 @@
         flex: 0 $tablet * $one-wide;
       }
 
-      @if $offset-tablet == 0 {
+      @if $tablet-offset == 0 {
         margin-left: 0;
       } @else {
         @include calculate-offset($offset);
@@ -105,7 +106,7 @@
         flex: 0 $computer * $one-wide;
       }
 
-      @if $offset-computer == 0 {
+      @if $computer-offset == 0 {
         margin-left: 0;
       } @else {
         @include calculate-offset($offset);
