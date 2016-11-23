@@ -1,9 +1,9 @@
-<h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">☯ Akali</a></h1>
+<h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">Akali</a></h1>
 
 <p align="center">Semantic, responsive, and lightweight flexbox grid.</p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     <a href="https://github.com/meu-guru/akali-grid/stargazers"><img src="https://img.shields.io/github/stars/meu-guru/akali-grid.svg"></a>
     <a href="https://github.com/meu-guru/akali-grid/issues"><img src="https://img.shields.io/github/issues/meu-guru/akali-grid.svg"></a>
     <img src="https://img.shields.io/badge/version-0.1-green.svg">
@@ -33,7 +33,7 @@ Akali is maintaned by <a href="http://meu.guru">meu.guru</a> and receives consta
 
 * Include in your project:
 ```css
-	<link rel='stylesheet' type='text/css' href='akali-grid.css'>
+  <link rel='stylesheet' type='text/css' href='akali-grid.css'>
 ```
 
 
