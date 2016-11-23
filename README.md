@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">☯ Akali</a></h1>
 
-<p align="center">Semantic, responsive, magical, easy to learn flexbox grid.</p>
+<p align="center">Semantic, responsive, and lightweight flexbox grid.</p>
 
 <p align="center">
 	<img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -20,6 +20,7 @@
 ## <a name="about"></a>About
 ### What is Akali Grid?
 Grids divide horizontal space into units called "column". Imagine your page divided into 12 columns, you could set your sidenav to take 4 columns and your content to take 8. Using Akali makes content appear to flow more naturally on your page and in other devices.
+Akali is maintaned by <a href="http://meu.guru">meu.guru</a> and receives constant updates.
 
 
 ## <a name="start"></a>Getting started
