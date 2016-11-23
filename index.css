@@ -4,8 +4,9 @@ body {
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background: #f5f5f5;
-  color: #383838;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #000;
 }
 
 a {
@@ -69,7 +70,7 @@ iframe[src*="codepen"],
 
   .powered p,
   .powered a {
-    color: #fff;
+    color: #000;
   }
 
 .no.margin {
@@ -116,35 +117,8 @@ p.margin.top {
 }
 
 .primary.color {
-  background-color: #34495e;
-  color: #fff;
-}
-
-.file.draw {
-  width: 47px;
-  height: 63px;
-  background: #fff;
-  margin: 50px auto auto auto;
-}
-
-.file.draw:before {
-  content: '.css';
-  position: absolute;
-  color: #989898;
-  font-size: 14px;
-  margin-left: -13px;
-  margin-top: 40px;
-}
-
-.file.draw:after {
-  content: '';
-  position: absolute;
-  background: none;
-  margin-left: 8px;
-  width: 1px;
-  height: 1px;
-  border-top: 15px solid #34495e;
-  border-left: 15px solid #ccc;
+  background-color: #f5f5f5;
+  color: #000;
 }
 
 .button {
@@ -162,13 +136,13 @@ p.margin.top {
     background: #d3d4d6;
   }
 
-.lighter.button {
+.darker.button {
   color: #fff;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(0, 0, 0, .2);
 }
 
-  .lighter.button:hover {
-    background: rgba(255, 255, 255, .4);
+  .darker.button:hover {
+    background: rgba(0, 0, 0, .4);
   }
 
 .buttons .button {
@@ -204,8 +178,12 @@ p.margin.top {
 }
 
 .tab .button.active {
-  background-color: #34495e;
-  color: #fff;
+  background-color: #ccc;
+  color: #333;
+}
+
+.tab .button:not(.active) {
+  background-color: #eee;
 }
 
 .tab-content:not(.active) {
