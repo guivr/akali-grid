@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">☯ Akali</a></h1>
+<h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">Akali</a></h1>
 
 <p align="center">Semantic, responsive, and lightweight flexbox grid.</p>
 
