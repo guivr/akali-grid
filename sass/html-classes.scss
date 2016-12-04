@@ -6,7 +6,7 @@
     [class*="#{$wide} wide column"] {
       @include get-wide-settings($wide);
     }
-    [class$="offset #{$wide} column"] {
+    [class*="offset #{$wide} column"] {
       @include get-offset-value($wide);
     }
   }
