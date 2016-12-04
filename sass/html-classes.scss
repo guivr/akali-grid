@@ -33,12 +33,12 @@
     }
   }
 
-  @media all and (min-width: $min-computer-width) {
+  @media all and (min-width: $min-desktop-width) {
     @each $wide in $wides {
-      [class*="#{$wide} wide on computer"].column {
+      [class*="#{$wide} wide on desktop"].column {
         @include get-wide-settings($wide);
       }
-      [class*="offset #{$wide} on computer"].column {
+      [class*="offset #{$wide} on desktop"].column {
         @include get-offset-value($wide);
       }
     }
@@ -107,7 +107,7 @@
     $count: $count - 1;
   }
   
-  @media all and (max-width: $min-computer-width - .1em){
+  @media all and (max-width: $min-desktop-width - .1em){
     &.stackable .column {
       flex: 0 100%;
     }
@@ -120,26 +120,26 @@
       flex: 1 !important;
     }
 
-    [class*="computer only"].column,
+    [class*="desktop only"].column,
     [class*="tablet only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="tablet and desktop only"].column {
       display: none;
     }
 
     [class*="mobile and tablet only"].column,
-    [class*="mobile and computer only"].column {
+    [class*="mobile and desktop only"].column {
       display: block;
     }
   }
 
-  @media all and (min-width: $min-tablet-width) and (max-width: $min-computer-width - .1em) {
+  @media all and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - .1em) {
     [class*="fill on tablet"].column {
       flex: 1 !important;
     }
 
     [class*="mobile only"].column,
-    [class*="computer only"].column,
-    [class*="mobile and computer only"].column {
+    [class*="desktop only"].column,
+    [class*="mobile and desktop only"].column {
       display: none;
     }
 
@@ -148,7 +148,7 @@
     }
 
     [class*="mobile and tablet only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="tablet and desktop only"].column {
       display: block;
     }
   }
@@ -159,8 +159,8 @@
     }
   }
   
-  @media all and (min-width: $min-computer-width) {
-    [class*="fill on computer"].column {
+  @media all and (min-width: $min-desktop-width) {
+    [class*="fill on desktop"].column {
       flex: 1 !important;
     }
 
@@ -170,21 +170,21 @@
       display: none;
     }
 
-    [class*="computer only"].column {
+    [class*="desktop only"].column {
       display: block;
     }
 
-    [class*="mobile and computer only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="mobile and desktop only"].column,
+    [class*="tablet and desktop only"].column {
       display: block;
     }
 
-    [class*="offset zero on computer"].column {
+    [class*="offset zero on desktop"].column {
       margin-left: 0;
     }
   }
   
-  @media all and (max-width: $min-computer-width - .1em){
+  @media all and (max-width: $min-desktop-width - .1em){
     &.stackable .column {
       flex: 0 100%;
     }
@@ -197,26 +197,26 @@
       flex: 1 !important;
     }
 
-    [class*="computer only"].column,
+    [class*="desktop only"].column,
     [class*="tablet only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="tablet and desktop only"].column {
       display: none;
     }
 
     [class*="mobile and tablet only"].column,
-    [class*="mobile and computer only"].column {
+    [class*="mobile and desktop only"].column {
       display: block;
     }
   }
 
-  @media all and (min-width: $min-tablet-width) and (max-width: $min-computer-width - .1em) {
+  @media all and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - .1em) {
     [class*="fill on tablet"].column {
       flex: 1 !important;
     }
 
     [class*="mobile only"].column,
-    [class*="computer only"].column,
-    [class*="mobile and computer only"].column {
+    [class*="desktop only"].column,
+    [class*="mobile and desktop only"].column {
       display: none;
     }
 
@@ -225,7 +225,7 @@
     }
 
     [class*="mobile and tablet only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="tablet and desktop only"].column {
       display: block;
     }
   }
@@ -236,8 +236,8 @@
     }
   }
   
-  @media all and (min-width: $min-computer-width) {
-    [class*="fill on computer"].column {
+  @media all and (min-width: $min-desktop-width) {
+    [class*="fill on desktop"].column {
       flex: 1 !important;
     }
 
@@ -247,16 +247,16 @@
       display: none;
     }
 
-    [class*="computer only"].column {
+    [class*="desktop only"].column {
       display: block;
     }
 
-    [class*="mobile and computer only"].column,
-    [class*="tablet and computer only"].column {
+    [class*="mobile and desktop only"].column,
+    [class*="tablet and desktop only"].column {
       display: block;
     }
 
-    [class*="offset zero on computer"].column {
+    [class*="offset zero on desktop"].column {
       margin-left: 0;
     }
   }

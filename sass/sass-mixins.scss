@@ -4,7 +4,7 @@
   margin-left: $wide * $one-wide;
 }
 
-@mixin row($mobile: auto, $tablet: auto, $computer: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
+@mixin row($mobile: auto, $tablet: auto, $desktop: auto, $centered: false, $vertical-centered: false, $reversed: false, $stackable: false, $reversed-stackable: false, $mobile-visible: true, $tablet-visible: true, $desktop-visible: true){
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -51,18 +51,18 @@
     }
   }
 
-  @if $computer != auto {
-    @media all and (min-width: $min-computer-width) {
+  @if $desktop != auto {
+    @media all and (min-width: $min-desktop-width) {
       & > * {
-        flex: 0 ($grid-total-columns/$computer)*$one-wide !important;
+        flex: 0 ($grid-total-columns/$desktop)*$one-wide !important;
       }
 
-      @if $computer-visible == false { display: none; }
+      @if $desktop-visible == false { display: none; }
     }
   }
 }
 
-@mixin column ($mobile: auto, $tablet: auto, $computer: auto, $mobile-visible: true, $tablet-visible: true, $computer-visible: true, $offset: 0, $mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0){
+@mixin column ($mobile: auto, $tablet: auto, $desktop: auto, $mobile-visible: true, $tablet-visible: true, $desktop-visible: true, $offset: 0, $mobile-offset: 0, $tablet-offset: 0, $desktop-offset: 0){
   box-sizing: border-box;
   max-width: 100%;
 
@@ -98,26 +98,26 @@
     }
   }
 
-  @if $computer != auto {
-    @media all and (min-width: $min-computer-width) {
-      @if $computer == fill {
+  @if $desktop != auto {
+    @media all and (min-width: $min-desktop-width) {
+      @if $desktop == fill {
         flex: 1;
       } @else {
-        flex: 0 $computer * $one-wide;
+        flex: 0 $desktop * $one-wide;
       }
 
-      @if $computer-offset == 0 {
+      @if $desktop-offset == 0 {
         margin-left: 0;
       } @else {
         @include calculate-offset($offset);
       }
 
-      @if $computer-visible == false { display: none; }
+      @if $desktop-visible == false { display: none; }
     }
   }
 }
 
-@mixin container ($fluid: false, $mobile-visible: true, $tablet-visible: true, $computer-visible: true){
+@mixin container ($fluid: false, $mobile-visible: true, $tablet-visible: true, $desktop-visible: true){
   max-width: 100%;
       width: 90%;
   margin: 0 auto;
@@ -137,8 +137,8 @@
     }
   }
 
-  @if $computer-visible == false {
-    @media all and (min-width: $min-computer-width) {
+  @if $desktop-visible == false {
+    @media all and (min-width: $min-desktop-width) {
       display: none;
     }
   }

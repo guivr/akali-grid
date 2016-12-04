@@ -56,7 +56,7 @@ You'll love Akali, because it comes with unbelievable handy utilities.
 1. Easily fill columns spaces with 'fill column', no math :-P
 2. Easily center grids with 'centered grid'
 3. Create columns that will take full width on mobile no matter what with 'stackable grid'
-4. Determine which device the column should appear by using 'computer only', etc
+4. Determine which device the column should appear by using 'desktop only', etc
 5. Set offset for each device 'offset two on tablet' or set global offset 'offset two column'
 6. Reverse a grid order with 'reversed grid', if grid is stackable, 'stackable reversed grid'
 7. Create containers or full width containers with 'container' or 'fluid container'  

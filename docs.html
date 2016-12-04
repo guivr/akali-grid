@@ -48,14 +48,14 @@
         <p>Normal rows works the way you expect, while Limited Rows override's columns wide to be exactly the defined on row, for example, a two row column will have its column's size defined to 50%, which means 2 per row.</p>
         <p class="margin top">If you are using SASS/SCSS, Rows have the possible arguments by default:</p>
         <ul>
-          <li>$mobile: auto, $tablet: auto, $computer: auto - Create limited rows that changes with the devices size</li>
+          <li>$mobile: auto, $tablet: auto, $desktop: auto - Create limited rows that changes with the devices size</li>
           <li>$centered: false, $vertical-centered: false</li>
           <li>$reversed: false - Columns order will be reversed</li>
           <li>$stackable: false, $reversed-stackable: false - Columns in a stackable row takes 100% width on mobile</li>
-          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide rows in specific devices by declaring any of these vars to false</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $desktop-visible: true - Hide rows in specific devices by declaring any of these vars to false</li>
         </ul>
       </div>
-      <div class="seven wide on computer
+      <div class="seven wide on desktop
                   ten wide column">
           <div class="tab buttons">
             <div class="active button" data-tab="1">HTML</div>
@@ -82,12 +82,12 @@
         <p>If you don't define a columns' wide on a Normal Row, it will automatically fit conforms the number of columns, for example, 4 auto size in a normal row, each one will have 25% width.</p>
         <p class="margin top">If you are using SASS/SCSS, Columns have the possible arguments by default:</p>
         <ul>
-          <li>$mobile: auto, $tablet: auto, $computer: auto - Define the wide of the column in devices, remember that Akali is mobile-first, so if you do this: @include column(4) it will understand that you want to create a column that is 4 wide on all devices.</li>
-          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide columns in specific devices by declaring any of these vars to false</li>
-          <li>$offset: 0 ($mobile-offset: 0, $tablet-offset: 0, $computer-offset: 0) - Offset are left margins that take the argument of a column wide, and you can set different offsets according to devices.</li>
+          <li>$mobile: auto, $tablet: auto, $desktop: auto - Define the wide of the column in devices, remember that Akali is mobile-first, so if you do this: @include column(4) it will understand that you want to create a column that is 4 wide on all devices.</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $desktop-visible: true - Hide columns in specific devices by declaring any of these vars to false</li>
+          <li>$offset: 0 ($mobile-offset: 0, $tablet-offset: 0, $desktop-offset: 0) - Offset are left margins that take the argument of a column wide, and you can set different offsets according to devices.</li>
         </ul>
       </div>
-      <div class="seven wide on computer
+      <div class="seven wide on desktop
                   ten wide column">
           <div class="tab buttons">
             <div class="active button" data-tab="1">HTML</div>
@@ -113,10 +113,10 @@
         <p class="margin top">If you are using SASS/SCSS, Containers have the possible arguments by default:</p>
         <ul>
           <li>$fluid: false</li>
-          <li>$mobile-visible: true, $tablet-visible: true, $computer-visible: true - Hide containers in specific devices by declaring any of these vars to false</li>
+          <li>$mobile-visible: true, $tablet-visible: true, $desktop-visible: true - Hide containers in specific devices by declaring any of these vars to false</li>
         </ul>
       </div>
-      <div class="seven wide on computer
+      <div class="seven wide on desktop
                   ten wide column">
           <div class="tab buttons">
             <div class="active button" data-tab="1">HTML</div>
