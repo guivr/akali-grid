@@ -1,11 +1,11 @@
-<h1 align="center"><a href="https://meu-guru.github.io/akali-grid/">Akali</a></h1>
+<h1 align="center"><a href="https://vitrineed.github.io/akali-grid/">Akali</a></h1>
 
 <p align="center">Semantic, responsive, and lightweight flexbox grid.</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-    <a href="https://github.com/meu-guru/akali-grid/stargazers"><img src="https://img.shields.io/github/stars/meu-guru/akali-grid.svg"></a>
-    <a href="https://github.com/meu-guru/akali-grid/issues"><img src="https://img.shields.io/github/issues/meu-guru/akali-grid.svg"></a>
+    <a href="https://github.com/vitrineed/akali-grid/stargazers"><img src="https://img.shields.io/github/stars/vitrineed/akali-grid.svg"></a>
+    <a href="https://github.com/vitrineed/akali-grid/issues"><img src="https://img.shields.io/github/issues/vitrineed/akali-grid.svg"></a>
     <img src="https://img.shields.io/badge/version-0.1-green.svg">
     <a href="http://codepen.io/guivr/pen/YWEbGG"><img src="https://img.shields.io/badge/demo-online-green.svg"></a>
 </p>
@@ -20,7 +20,7 @@
 ## <a name="about"></a>About
 ### What is Akali Grid?
 Grids divide horizontal space into units called "column". Imagine your page divided into 12 columns, you could set your sidenav to take 4 columns and your content to take 8. Using Akali makes content appear to flow more naturally on your page and in other devices.
-Akali is maintaned by <a href="http://meu.guru">meu.guru</a> and receives constant updates.
+Akali is maintaned by <a href="http://vitrineed.com.br">Vitrineed</a> and receives constant updates.
 
 
 ## <a name="start"></a>Getting started
@@ -29,7 +29,7 @@ Akali is maintaned by <a href="http://meu.guru">meu.guru</a> and receives consta
 
 * Clone the project
 
-        $ git clone https://github.com/meu-guru/akali-grid.git
+        $ git clone https://github.com/vitrineed/akali-grid.git
 
 * Include in your project:
 ```css
