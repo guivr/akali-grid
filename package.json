@@ -2,6 +2,7 @@
   "name": "akali-grid",
   "version": "1.0.0",
   "description": "Semantic, responsive, tiny, easy to learn and mantain flexbox grid",
+  "keywords": ["flexbox", "css", "flexbox-grid", "css-grid", "grid", "flexbox grid", "css grid"],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
